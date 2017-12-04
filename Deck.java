@@ -67,6 +67,19 @@ public class Deck {
 			    getOneCard(true);
 		    }	 
 		}
+		else {
+			 if(cards.size()!= 0){
+				    nUsed = nUsed + 1;
+			        Card card = cards.get(0);
+			        usedCard.add(card);
+			        cards.remove(0);
+			        return card;
+			    }
+			    else{
+				    shuffle();
+				    getOneCard(false);
+			    }
+		}
 		return null;
 		
 	}
